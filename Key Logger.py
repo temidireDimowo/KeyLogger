@@ -51,7 +51,7 @@ def on_press(key):
     elif key == Key.backspace:
         word = word[:-1]
     else:
-        char = f'(key)'
+        char = f'{key}'
         char = char[1:-1]
         word += char
 
