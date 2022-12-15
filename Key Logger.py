@@ -21,7 +21,7 @@ print('''
 # set up email
 
 email = input('Email: ')
-password = input('Password')
+password = input('Password: ')
 server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
 server.login(email, password)
 
